@@ -1,0 +1,14 @@
+<%= form_tag "/client/problems", method: :post do %>
+  <div>
+          <h1>Capstone</h1>
+    <h3>Prompt: <%= @problem['prompt'] %> </h3>
+  </div>
+
+    Solution Test: <input type="text" name="solution_tests" value="<%= @problem['solution_tests'] %>" />
+  </div>
+  <div>
+  
+  </div>
+  <input type="submit" name="" value="Submit Answer" />
+
+  <% end %>

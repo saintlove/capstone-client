@@ -1,0 +1,19 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/scores/#{@score["id"]}", method: :patch do %>
+  <div>
+    Progress: <input type="text" name="progress" value="<%= @score["progress"] %>" />
+  </div>
+  <div>
+    Previous Solution: <input type="text" name="previous_solution" value="<%= @score["previous_solution"] %>" />
+  </div>
+
+  <input type="submit" name="" value="Update score"/>
+<% end %>
+

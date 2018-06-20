@@ -1,0 +1,18 @@
+<% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_tag "/client/problems", method: :post do %>
+  <div>
+    Prompt: <input type="text" name="prompt" value="<%= @problem['prompt'] %>" />
+  </div>
+  <div>
+    Solution Tests: <input type="text" name="solution_tests" value="<%= @problem['solution_tests'] %>" />
+  </div>
+
+  <input type="submit" name="" value="Create Problem" />
+<% end %>
